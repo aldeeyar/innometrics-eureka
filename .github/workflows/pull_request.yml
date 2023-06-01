@@ -3,12 +3,10 @@ name: Main Branch Pipeline
 env:
   EUREKA_IMAGE: aldeeyar/innometrics-eureka:${{ github.sha }}
 
-on: [pull_request]
+on: [pull_request] 
 
 jobs:
   tests:
-    name: Tests
-    runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
